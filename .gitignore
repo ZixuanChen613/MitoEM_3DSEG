@@ -1,0 +1,4 @@
+*.log
+/outputs/
+*.vscode
+rat_val_gt.h5
