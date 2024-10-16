@@ -8,8 +8,8 @@ SYSTEM:
 MODEL:
   ARCHITECTURE: 'unet_residual_3d' # 'unet_residual_3d' for res-unet-r  and 'rsunet' for res-unet-h
   FILTERS: [28, 36, 48, 64, 80]
-  INPUT_SIZE: [36, 320, 320]
-  OUTPUT_SIZE: [36, 320, 320]
+  INPUT_SIZE: [36, 320, 320]  #  train thenetwork in20Kiterationswith the input size  32 256 256 t oselect the best model. 
+  OUTPUT_SIZE: [36, 320, 320]  # Then change the input size to 36 320 320 and fine-tune the network in 10K iterations.
   IN_PLANES: 1
   OUT_PLANES: 2
   LOSS_OPTION: [['DiceLoss', 'WeightedBCE'], ['DiceLoss', 'WeightedBCE']]
@@ -50,4 +50,4 @@ INFERENCE:
   AUG_MODE: 'mean'
   AUG_NUM: 0
   STRIDE: [16, 128, 128] # [16, 128, 128]
-  SAMPLES_PER_BATCH: 12
+  SAMPLES_PER_BATCH: 48

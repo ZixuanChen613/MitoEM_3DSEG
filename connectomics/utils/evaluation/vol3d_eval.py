@@ -158,8 +158,8 @@ class VOL3Deval:
             if npig == 0:
                 continue
 
-            tp_sum = np.cumsum(tps, axis=1).astype(dtype=np.float)
-            fp_sum = np.cumsum(fps, axis=1).astype(dtype=np.float)
+            tp_sum = np.cumsum(tps, axis=1).astype(dtype=np.float64)
+            fp_sum = np.cumsum(fps, axis=1).astype(dtype=np.float64)
 
             for t, (tp, fp) in enumerate(zip(tp_sum, fp_sum)):
                 tp = np.array(tp)

@@ -39,7 +39,7 @@ class Trainer(object):
     def __init__(self, cfg, device, mode, checkpoint=None):
         self.cfg = cfg
         self.device = device
-        self.output_dir = cfg.DATASET.OUTPUT_PATH
+        self.output_dir = cfg.DATASET.OUTPUT_PATH   # 'outputs/dataset_output'
         self.mode = mode
 
         self.model = build_model(self.cfg, self.device)
